@@ -13,15 +13,15 @@ import javax.activation.FileDataSource;
 public class EmailSender {
 
     // Gmail credentials - replace with yours
-    private static final String USERNAME = "bm464277@gmail.com";
-    private static final String PASSWORD = "qxlf urmt wcwq bywo"; // Get from Google App Passwords
-    
+    private static final String USERNAME = "bm464277@gmail.com"; // Your Gmail account
+    private static final String PASSWORD = "qxlf urmt wcwq bywo"; // 16-Digit long code. Get from Google App Passwords
+
     public static void sendEmail(String toEmail, String subject, String body) {
         sendEmailWithAttachment(toEmail, subject, body, null);
     }
-    
+
     public static void sendEmailWithAttachment(String toEmail, String subject, String body, String filePath) {
-        
+
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -35,6 +35,7 @@ public class EmailSender {
         });
 
         try {
+            //Objects declaration
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(USERNAME));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
@@ -70,14 +71,18 @@ public class EmailSender {
     }
 
     public static void main(String[] args) {
-        // Send email without attachment
+        // Send email WITHOUT attachment
         // sendEmail(
-        //     "jocace1506@imfaya.com", 
-        //     "Test Email", 
-        //     "Yo! This is a test email from Java."
+        // "jocace1506@imfaya.com",
+        // "Test Email",
+        // "Yo! This is a test email from Java."
         // );
-        
-        // Send email with attachment
-        sendEmailWithAttachment("garciacallejero24@iessantiagohernandez.com", "Email with File", "Check out this attachment!", "c:\\Users\\andro\\Pictures\\ello.gif");
+
+        // Send email WITH attachment
+        sendEmailWithAttachment(
+                "garciacallejero24@iessantiagohernandez.com", //Reciever
+                "Email with File", //Asunto
+                "Check out this attachment!", //Text
+                "smtp\\attachment\\ello.gif"); //Attachment URL
     }
 }
