@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "c:\\Users\\andro\\Downloads\\activation-1.1.1.jar",
+        "c:\\Users\\andro\\Downloads\\javax.mail.jar"
+    ]
+}
