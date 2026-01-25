@@ -13,8 +13,8 @@ import javax.activation.FileDataSource;
 public class EmailSender {
 
     // Gmail credentials - replace with yours
-    private static final String USERNAME = "bm464277@gmail.com"; // Your Gmail account
-    private static final String PASSWORD = "qxlf urmt wcwq bywo"; // 16-Digit long code. Get from Google App Passwords
+    private static final String USERNAME = "YOUR EMAIL HERE!!"; // Your Gmail account
+    private static final String PASSWORD = "YOUR 16-DIGIT long HERE!!!"; // 16-Digit long code. Get from Google App Passwords
 
     public static void sendEmail(String toEmail, String subject, String body) {
         sendEmailWithAttachment(toEmail, subject, body, null);
@@ -80,9 +80,9 @@ public class EmailSender {
 
         // Send email WITH attachment
         sendEmailWithAttachment(
-                "garciacallejero24@iessantiagohernandez.com", //Reciever
+                "RECIEVER EMAIL!", //Reciever
                 "Email with File", //Asunto
                 "Check out this attachment!", //Text
-                "smtp\\attachment\\ello.gif"); //Attachment URL
+                "smtp\\attachment\\ello.gif"); //Attachment URL, this URL here containns a gif.
     }
 }
