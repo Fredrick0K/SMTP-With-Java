@@ -3,6 +3,7 @@
 This application requires 2 libraries:
   - Java Mail
   - Java Activation
+
 Both are located [here](https://github.com/Fredrick0K/SMTP_Java-WithAttachments/tree/main/smtp/lib)
 
 
